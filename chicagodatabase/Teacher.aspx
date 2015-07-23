@@ -10,8 +10,8 @@
       <asp:HyperLink ID="EnterMile" runat="server" ImageUrl="../Images/update_milage.png" hover="../Images/update_milage_rollover.png" >   </asp:HyperLink>
       &nbsp;&nbsp;
       <asp:HyperLink ID="MileSearch" runat="server" ImageUrl="../Images/edit_mile.png" hover="../Images/edit_mile_rollover.png"> </asp:HyperLink>
-      &nbsp;&nbsp;
-      <asp:HyperLink ID="AddClass" runat="server"  ImageUrl="../Images/add_class.png" hover="../Images/add_class_rollover.png"></asp:HyperLink>
+      
+      <asp:HyperLink ID="AddClass" runat="server"  ImageUrl="../Images/add_class.png" hover="../Images/add_class_rollover1.png"></asp:HyperLink>
    </div>
    <br />
    <br />

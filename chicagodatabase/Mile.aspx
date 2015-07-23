@@ -9,6 +9,15 @@
 <div class="InformationalMsg" id="MessageDiv" runat="server" Visible="false" >
     <asp:Literal ID="Message" runat="server" />
 </div>
+
+<div id="actionlinks">
+      <asp:HyperLink ID="EnterMile" runat="server" ImageUrl="../Images/update_milage.png" hover="../Images/update_milage_rollover.png" >   </asp:HyperLink>
+      &nbsp;&nbsp;
+      <asp:HyperLink ID="MileSearch" runat="server" ImageUrl="../Images/edit_mile.png" hover="../Images/edit_mile_rollover.png"> </asp:HyperLink>
+      
+      <asp:HyperLink ID="AddClass" runat="server"  ImageUrl="../Images/add_class.png" hover="../Images/add_class_rollover1.png"></asp:HyperLink>
+   </div>
+   
 <div style="float:right;"><asp:Image ID="Indicator" runat="server"/></div>
 <div style="float:left; width:400px;">
     <asp:Image ID="Icon1" runat="server"/>&nbsp;Select Class/Students
@@ -16,7 +25,10 @@
     <asp:HiddenField runat="server" ID="UserId"></asp:HiddenField>
     <CR:UserList ID="UserList" runat="server" Height="360" />
 </div>
-<div style="float:left;width:510px;margin-left:10px">
+
+
+        
+<div style="float:right;width:510px;margin-left:10px">
     <table cellspacing="0" cellpadding="2">
         <tr><td colspan="3"><asp:Image ID="Icon2" runat="server"/>&nbsp;Select Activity/Unit</td><td>&nbsp;</td></tr>
         <tr>

@@ -5,6 +5,28 @@ body { font-family: Arial; width: 960px; margin: 0px auto; padding: 0px; font-si
 #popup .siteName { font-weight: bold; font-size: 15px; border-bottom: 1px solid #AAAAAA; color: #F85B18; margin-bottom: 5px; }
 #popup .content { font-size: 10px; }
 
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+
+::-webkit-scrollbar-thumb {
+      background-color: #fca532; 
+} /* this will style the thumb, ignoring the track */
+
+
+
+/*temp*/
+#MileSearch{
+	display:none;
+}
+
 a 
 {
     text-decoration: none;    
@@ -332,6 +354,11 @@ a:hover
     border-radius: 10px;
     box-shadow: 5px 5px 5px #AAA;
 }
+
+table.content {
+    width:100%;
+}
+
 .contentArea .content td {
     padding: 5px 0px;
 }

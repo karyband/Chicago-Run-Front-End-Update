@@ -1,0 +1,50 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ChicagoRun.master.cs" Inherits="ChicagoRun.WebUI.Masters.ChicagoRun" EnableTheming="false" %>
+<%@ Register Src="~/Controls/Footer.ascx" TagName="Footer" TagPrefix="CR" %>
+<%@ Register Src="~/Controls/GroupHeader.ascx" TagName="GroupHeader" TagPrefix="CR" %>
+<%@ Register Src="~/Controls/SingleHeader.ascx" TagName="SingleHeader" TagPrefix="CR" %>
+<%@ Register Src="~/Controls/NavigationBar.ascx" TagName="NavigationBar" TagPrefix="CR" %>
+<%@ Import Namespace="ChicagoRun.Common" %>
+<%@ Import Namespace="ChicagoRun.WebUI.Helpers" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>My Chicago Run</title>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37973274-1']);
+        _gaq.push(['_trackPageview']);
+        
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })(); 
+    </script>
+    <link rel="shortcut icon" href="../Images/favicon.ico" >
+    <link rel="stylesheet" href="<%=UrlHelper.GetAbsoluteUrlWithVersion("styles/chicagorun.css") %>" type="text/css" />
+    <link rel="stylesheet" href="<%=UrlHelper.GetAbsoluteUrlWithVersion("styles/jquery-ui-1.8.22.custom.css") %>" type="text/css" />
+    <script type="text/javascript" language="javascript" src="<%=UrlHelper.GetAbsoluteUrlWithVersion("scripts/jquery/jquery-1.7.2.min.js") %>"></script>
+    <script type="text/javascript" language="javascript" src="<%=UrlHelper.GetAbsoluteUrlWithVersion("scripts/jquery/jquery-ui-1.8.22.custom.min.js") %>"></script>
+    <script type="text/javascript" language="javascript" src="<%=UrlHelper.GetAbsoluteUrlWithVersion("scripts/ChicagoRunCommon.js") %>"></script>
+    <script type="text/javascript" src="<%=AppSettings.GoogleMapLink %>"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">    
+    <div>
+        <CR:GroupHeader ID="GroupHeader" runat="server" />
+        <CR:SingleHeader ID="SingleHeader" runat="server" />
+        <CR:NavigationBar ID="NavigationBar" runat="server" />
+        <div style="margin-top: 20px">
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+   
+    <CR:Footer ID="Footer" runat="server" />
+    </form>
+</body>
+</html>
