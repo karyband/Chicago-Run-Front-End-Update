@@ -1,0 +1,699 @@
+Html { height: 100%;}
+body { font-family: Arial; width: 960px; margin: 0px auto; padding: 0px; font-size: 12px;background-image: url('../Images/login_home_background_4.jpg');background-repeat: no-repeat;background-color: #FEFCEF;}
+#map { margin: 0px; }
+#map_canvas { border: 1px solid #AAA; border-radius: 5px;}     
+#popup .siteName { font-weight: bold; font-size: 15px; border-bottom: 1px solid #AAAAAA; color: #F85B18; margin-bottom: 5px; }
+#popup .content { font-size: 10px; }
+
+a 
+{
+    text-decoration: none;    
+}
+a:hover 
+{
+    text-decoration: underline;   
+}
+/* home.aspx */
+.login
+{
+    width: 600px;
+    height: 157px;
+    margin: 20px auto 0px auto;
+    background-image: url('../Images/login_background_03.png');
+    background-repeat: no-repeat;
+}
+.login .inputTextbox
+{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 160px;
+    height: 38px;
+    float: left;
+    background-image: url('../Images/inputbackground_06.png');
+    padding-top: 10px;
+    padding-left: 2px;
+    background-repeat: no-repeat;
+}
+.login .inputTextbox .textbox
+{
+    float: left;
+}
+.login .inputTextbox input[type=text],
+.login .inputTextbox input[type=password]
+{
+    width: 120px;
+    border: none;
+}
+.login .inputTextbox .icon
+{
+    margin: 0px 5px;
+    float: left;
+}
+.loginbutton
+{
+    padding: 0px;
+    border-width: 0px;
+    width: 130px;
+    height: 39px;
+    margin-top: 10px;
+    margin-left: 252px;
+}
+.error
+{
+    margin-left: 145px;
+    font-size: 14px;
+    color: #0000FF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 250px;
+    height: 20px;
+    margin-top: 10px;
+}
+/* home.aspx */
+/* Headers */
+.groupHeader {
+	border-bottom: solid #b3b3b3;
+    width: 960px;
+    height: 356px;
+    background-image: url('../Images/runners_flag_blue.png');
+    background-repeat: no-repeat;
+}
+
+#LogOut {
+	font-size:1.5em;
+}
+.groupHeader .logout {
+    margin-left: 830px;
+}
+.groupHeader .headerProgress {
+    height: 340px;
+    background-image: url('../Images/runners_flag_orange.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10;
+}
+.groupHeader .headerHomeLink {
+    height: 200px;
+    width: 180px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+}
+.groupHeader .goalMile {
+    font-size: 14px;
+    color: #888888;
+    margin-top: 230px;
+    width: 220px; 
+}
+.groupHeader .goalMile .title {
+    font-size: 16px;
+    border-bottom: 1px solid #B3B3B3;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.groupHeader .goalMile .mileToDate {
+    margin-bottom: 5px;
+}
+.singleHeader {
+    width: 960px;
+    height: 220px;
+    margin-bottom: 20px;
+    background-image: url('../Images/smallrunnerprogress_blue.png');
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+}
+.singleHeader .logout {
+    margin-left: 830px;
+}
+.singleHeader .headerProgress {
+    height: 200px;
+    background-image: url('../Images/smallrunnerprogress_orange.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10;
+}
+.singleHeader .headerHomeLink {
+    height: 200px;
+    width: 180px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+}
+.singleHeader .title {
+    background-image: url('../Images/welcome.png');
+    background-repeat: no-repeat;
+    font-size: 20px;
+    font-weight: bold;
+    color: #F85B17;
+    padding-left: 270px;
+    padding-top: 15px;
+    height: 40px;
+    margin: 20px 0 0 250px;
+}
+.singleHeader .mileToDate {
+    margin: 90px 0 0 250px;
+    font-size: 16px;
+    color: #888888;
+    width: 350px;
+    font-weight: bold;
+    float: left;
+}
+.singleHeader .goal {
+    margin: 90px 0 0 0;
+    font-size: 16px;
+    color: #888888;
+    font-weight: bold;
+    float: right;
+}
+
+.singleHeader .goalDate
+{
+    margin: 0px 0 0 0;
+    font-size: 16px;
+    color: #888888;
+    font-weight: bold;
+    float: right;
+}
+/* Headers */
+/* Navigation Bar */
+.navigationSection {
+    margin-top: -25px;
+    color: #888888;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.navigationSection a {
+    color: #888888;
+}
+.navigationSection .currentPageText {
+    color: #F85B17;
+}
+/* Navigation Bar */
+.clear
+{
+    clear: both;
+}
+.button {    
+	padding: 4px 10px;
+	border-radius: 5px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	background-color: #F85B17;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.large {
+    font-size: 15px;
+    padding: 6px 12px;
+    display: inline-block;
+}
+.button:hover {    
+	background-color: #BE4220;
+	text-decoration: none;
+}
+.buttonMile
+{
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    background-color: #3366FF;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.buttonMile:hover {    
+	background-color: #BE4220;
+	text-decoration: none;
+}
+.Footer {
+	margin: 20px 0px;
+	background-color: #F85B17;
+	padding: 10px;
+	color: #FFFFFF;
+	text-align: right;
+    text-transform: uppercase;
+}
+/* progress bar small */
+.ProgressBarSmall {
+    position: relative;
+}
+.ProgressBarSmall .Outer {
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    background-color: #fca532;
+    border-radius: 5px;
+}
+.ProgressBarSmall .Inner {
+    position: absolute;
+    height: 20px;
+    background-color: #f85b17;
+    border-radius: 5px;
+}
+.ProgressBarSmall .Progress {
+    position: relative;
+    height: 20px;
+    width: 100px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3px;
+}
+/* page content */
+#actionlinks 
+{
+    height: 30px;
+    font-size: 13px;
+    margin: 5px 0px 5px 0px;
+}
+
+.guardian .contentHeader tr
+{
+    height: 25px;
+}
+.guardian .contentHeader td
+{
+    width: 200px;
+}
+.guardian .contentHeader .label
+{
+    font-weight: bold;
+    font-size: 12px;
+    color: #CC6600;
+}
+
+#header .contentHeader {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #888888;
+}
+
+
+.header .contentHeader {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #888888;
+}
+.header .title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.contentAreaEntries {
+    margin: 5px 0px;
+    height: 135px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 2px solid;
+}
+.GuardaincontentArea {
+    margin: 5px 0px;
+    height: 167px;
+    border: 3px solid #F85B18;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #AAA;
+}
+
+.contentArea {
+    margin: 5px 0px;
+    height: 167px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 3px solid #F85B18;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #AAA;
+}
+.contentArea .content td {
+    padding: 5px 0px;
+}
+.tabPanel td {
+    padding: 5px;
+}
+.contentArea .contentAlternate,
+.contentAreaNoBorder .contentAlternate {
+    background-color: #dddddd;
+}
+.contentArea .contentDiv {
+    clear: both;
+    border-bottom: 1px solid #F85B18;
+    padding-left: 5px;
+}
+.contentArea .contentDiv div {
+    padding: 5px 0px;
+    display: inline-block;
+}
+.contentArea .Open {
+    float: right;
+    padding: 0px 5px 3px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 8px;
+    height: 12px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 3px 2px;
+    cursor: pointer;
+}
+.contentArea .StudentList {
+    margin: 0px 2px 0px 12px;
+    padding: 3px;
+    background-color: #EEEEEE;
+    display: none;
+}
+.contentArea .ClassCheckBox {
+    display: table;
+    height: 22px;
+    width: 375px;
+}
+.contentArea .activityEntry {
+    clear: both;
+    padding: 5px;
+    height: 20px;
+    border-bottom: 1px solid #007F0E;
+}
+.contentArea .activityEntry img {
+    border: 0px;
+}
+.contentArea .markerImage {
+    max-width: 100px;
+    max-height: 100px;
+}
+.contentArea .columnItem {
+    float: left;
+    width: 290px;
+}
+.contentArea .columnItem a {
+    float: right;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.contentArea .columnItem input[type=text], 
+.contentArea .columnItem textarea {
+    width: 250px;
+    padding: 2px;
+}
+.contentArea .activityList {
+    list-style-type: disc;    
+    margin-left: -15px;
+    margin-top: 2px;
+}
+.contentArea .activityList li {
+    margin-bottom:5px;
+    font-weight: bold;
+}
+.contentArea .activityList span {
+    font-weight: normal;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.contentAreaNoBorder {
+    margin: 5px 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.InformationalMsg {
+    margin: 5px 0px;
+    padding: 5px;
+    background-color: #9EFFA4;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #007F0E;
+    border-radius: 5px;
+    text-align: center;
+}
+.WarningMsg {
+    margin: 5px 0px;
+    padding: 5px;
+    background-color: #FF66FF;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #FF0000;
+    border-radius: 5px;
+    text-align: center;
+}
+.modalForm .title {
+    color: #FF0000;
+    font-style: italic;
+    padding: 3px 0px;
+}
+.modalForm label {
+    display: block;
+    padding: 3px 0px;
+}
+.modalForm input {
+    width: 250px;
+    padding: 3px 0px;
+}
+.modalForm .button {
+    width: 70px;
+    margin-right: 15px;
+    float: left;
+}
+/* student page */
+.userContent {
+    height: 620px;
+}
+.userContent .mainInfo {
+    width: 600px;
+    margin-right: 17px;
+    float: left;
+}
+.userContent .mainInfo .tabs .tab {
+    float: left;
+    width: 115px;
+    margin-bottom: 10px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.userContent .mainInfo .tabs .routeArrow {
+    float: left;
+    width: 22px;
+    cursor: pointer;
+}
+.userContent .mainInfo .tabPanels .tabPanel {
+    position: absolute;
+    border: 3px solid #F85B18;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #AAA;
+}
+.userContent .sideInfo {
+    width: 303px;
+    float: right;
+    margin-top: -20px;
+}
+.userContent .sideInfo .awardInfo .title {
+    color: #888888;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: #888888 solid 1px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.userContent .sideInfo .awardInfo .awardItem {
+    width: 250px;
+}
+.userContent .sideInfo .awardInfo .awardItem img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.userContent .sideInfo .itemPopup {
+    
+}
+.userContent .sideInfo .itemPopup .popupTop {
+    background-image: url('../images/bubble_top.png');
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 303px;
+}
+.userContent .sideInfo .itemPopup .popupContent {
+    background-image: url('../images/bubble_spacer.png');
+    width: 303px;
+    background-repeat: repeat-y;
+}
+.userContent .sideInfo .itemPopup .popupBottom {
+    background-image: url('../images/bubble_bottom.png');
+    width: 303px;
+    height: 81px;
+    background-repeat: no-repeat;
+}
+.userContent .sideInfo #RouteItemInfo {
+    width: 273px;
+    margin: 0px 15px;
+    padding-bottom: 10px;
+}
+.userContent .sideInfo #RouteItemInfo .image {
+    width: 273px;
+}
+.userContent .sideInfo #RouteItemInfo .image img {
+    margin: 0px auto;
+    display: block;
+}
+.userContent .sideInfo #RouteItemInfo .title {
+    color: #888888;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: #888888 solid 1px;
+    text-transform: uppercase;
+    padding: 10px 0px 5px 0px;
+    margin-bottom: 10px;
+}
+.userContent .sideInfo #RouteItemInfo .info {
+    color: #888888;
+    font-size: 13px;
+}
+.userContent .sideInfo #RouteItemInfo .info2 {
+    color: #888888;
+    font-size: 15px;
+    padding: 10px;
+    min-height: 300px;
+    max-height: 370px;
+    overflow: auto;
+}
+/* student page */
+/* Route Sort Order */
+.contentArea .sortable { list-style-type: none; margin: 0; padding: 7px; }
+.contentArea .sortable li { margin: 0 3px 3px 3px; padding: 3px 20px; font-size: 12px; height: 18px; cursor: pointer; float: left; }
+.contentArea .sortable li span { position: absolute; margin-left: -20px; }
+/* Route Sort Order */
+.deleteChange {
+    cursor: pointer;
+}
+
+.userMainNav
+{
+  font-size: 14px;
+  font-weight: 600;
+  color: #787878;
+}
+
+.userMainNav:hover      
+{
+  text-decoration: underline;
+  color: #993300;
+}
+
+/* multivalue label classes - mvl */
+#selectedDate 
+{
+    width: 300px;    
+}
+.singleValue 
+{
+	float: left;
+	margin-right: 4px;
+    margin-bottom: 5px;
+	border: 1px solid #F85B17;
+    width: 85px;
+    background-color: #FFFFFF;
+}
+.valueText 
+{
+	color: #000000;
+	padding: 2px;
+    float: left;
+}
+.singleValue .delete 
+{
+	cursor: pointer;
+	font-size: 12px;
+	padding: 2px 3px;
+	color: #FFFFFF;
+	background-color: #687B8C;
+    float: right;
+}
+
+#bulletin
+{
+    width: 300px; 
+    float: left;  
+}
+
+.bulletinHeading{
+	padding-top:0.5em;
+}
+
+#bulletin .bulletinHeading
+{ 
+    border: thin solid #fca532; 
+    background-color: #fca532; 
+    color: #FFFFFF; 
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: 700; 
+    font-size: 17px; 
+    height: 25px; 
+    vertical-align: middle;
+}
+ 
+
+ 
+ #bulletin .bulletinContent
+{ 
+    
+     border-style: solid; 
+     border-width: medium;
+     border-top-color:  #f85b17;
+     border-right-color:  #f85b17;
+     border-bottom-color:  #f85b17;
+     border-left-color:  #f85b17; 
+    
+     overflow-y: auto;
+     overflow-x: hidden;
+ }
+
+.MarkerSelection select {
+    margin-right: 10px;
+    padding: 3px;
+}
+
+/* style for drag and drop */
+
+   .drag
+{
+        border: 2px solid #CCCCCC;
+        font-size: 13px;
+        height: 18px;
+        margin: 0 3px 3px 3px;
+        padding: 3px 20px;
+        float: left;
+        cursor: pointer;
+        color: #0099CC;
+        font-weight: 400;
+    }
+.dragged
+{
+        border : 2px solid #CCCCCC;
+        font-size: 13px;
+        height: 18px;
+        margin: 0 3px 3px 3px;
+        padding: 3px 20px;
+        float: left;
+        cursor: pointer;
+        color: #0099CC;
+        font-weight: 400;  
+}
+.drop
+{
+  border: medium double #00FFFF;
+ 
+  height: 50px;
+  margin: 5px 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 3px solid #F85B18;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #AAA;
+  }
+  
+/* style for drag and drop */
