@@ -22,10 +22,10 @@ body { font-family: Arial; width: 960px; margin: 0px auto; padding: 0px; font-si
 
 
 
-/*temp*/
+/*temp
 #MileSearch{
 	display:none;
-}
+}*/
 
 a 
 {
@@ -221,22 +221,51 @@ a:hover
 	border-radius: 5px;
 	color: #FFFFFF;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 13px;
 	text-align: center;
 	background-color: #F85B17;
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
 }
+
+.buttonAdmin {    
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    background-color: #F85B17;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
 .large {
     font-size: 15px;
     padding: 6px 12px;
     display: inline-block;
 }
-.button:hover {    
+.button:hover, .bluebutton:hover, .buttonAdmin:hover {    
 	background-color: #BE4220;
 	text-decoration: none;
 }
+
+.bluebutton {  
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    background-color: #3366FF;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 12px;
+    display: inline-block;
+}
+
 .buttonMile
 {
     padding: 4px 10px;
@@ -245,7 +274,7 @@ a:hover
     font-weight: bold;
     font-size: 12px;
     text-align: center;
-    background-color: #3366FF;
+    background-color: #fca532;
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
