@@ -57,6 +57,15 @@
     <input type="hidden" id="EntryId" value="0"/>
 </div>
 <script type="text/javascript" language="javascript">
+    function MassEdit(){
+       $(".editmult").css({"background-color": "red"});
+        console.log("click");
+    }
+
+
+
+
+
     var rowHtml = "";
     function EditActivityEntry(activityValue) {
         $("#ActivityEntryEdit input[type=text]").val('');

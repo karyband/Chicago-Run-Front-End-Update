@@ -7,10 +7,10 @@
     <asp:Literal ID="Message" runat="server" />
 </div>
 
-<div id="editExisting" class="button" style="font-size:16px">Edit Existing Mileage &#8594;</div>
+<!--<div id="editExisting" class="button" style="font-size:16px">Edit Existing Mileage &#8594;</div>
    
 <div class="page-title"><h2>New Entry</h2></div>
-   
+-->   
 <div style="float:right;"><asp:Image ID="Indicator" runat="server"/></div>
 <div style="float:left; width:400px;">
     <asp:Image ID="Icon1" runat="server"/>&nbsp;Select Class/Students

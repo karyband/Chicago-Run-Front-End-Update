@@ -6,11 +6,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
     <div id="Div1">
-      <asp:HyperLink ID="UpdateMile" runat="server" ImageUrl="../Images/update_milage.png" hover="../Images/update_milage_rollover.png" > </asp:HyperLink>
-      &nbsp;&nbsp;
-      <asp:HyperLink ID="MileSearch" runat="server" ImageUrl="../Images/edit_mile.png" hover="../Images/edit_mile_rollover.png"> </asp:HyperLink>
-      &nbsp;&nbsp;
-      <asp:HyperLink ID="EditProfile" runat="server"  ImageUrl="../Images/edit_profile.png" hover="../Images/edit_profile_rollover.png"></asp:HyperLink>
+      <asp:HyperLink ID="UpdateMile" runat="server"><div class="lightbluebutton large" style="font-size:13px;">Add Mileage</div></asp:HyperLink>
+      &nbsp;
+      <asp:HyperLink ID="MileSearch" runat="server"><div class="button redbutton large" style="font-size:13px;">Edit Mileage</div></asp:HyperLink>
+      &nbsp;
+      <asp:HyperLink ID="EditProfile" runat="server"><div class="button large" style="font-size:13px;">Edit Profile</div></asp:HyperLink>
    </div>
    <br />
    <br />
@@ -70,7 +70,7 @@
             </div>
         </div>
          <div>
-            <div class="sideInfo">
+            <div class="sideInfo" style="margin-top:-55px">
                 <div id="bulletin" >
                    <div class="bulletinHeading">Chicago Run News</div>
                    <div class="bulletinContent" id="bulletinContentTxt" style="padding: 15px 20px 15px 25px; width: 249px; height: 235px;  font-size: 16px; color: #888888;" runat="server">

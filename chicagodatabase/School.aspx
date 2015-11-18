@@ -67,11 +67,11 @@
 <div style="clear:both; height:10px;"></div>
 <asp:Panel ID="ClassPanel" runat="server" Visible="false">
 <div id="actionlinks">
-    <asp:HyperLink ID="EnterMile" runat="server" ImageUrl="../Images/update_milage.png" hover="../Images/update_milage_rollover.png" >   </asp:HyperLink>
-    &nbsp;&nbsp;
-   <!-- <asp:HyperLink ID="MileSearch" runat="server" ImageUrl="../Images/edit_mile.png" hover="../Images/edit_mile_rollover.png"> </asp:HyperLink>-->
-
-    <asp:HyperLink ID="AddClass" runat="server"  ImageUrl="../Images/add_class.png" hover="../Images/add_class_rollover.png"></asp:HyperLink>
+   <asp:HyperLink ID="EnterMile" runat="server"><div class="lightbluebutton large" style="width:120px;font-size:13px;">Add Mileage</div></asp:HyperLink>
+      &nbsp;
+      <asp:HyperLink ID="MileSearch" runat="server"><div class="button redbutton large" style="width:120px;font-size:13px;">Edit Mileage</div></asp:HyperLink>
+      &nbsp;
+      <asp:HyperLink ID="AddClass" runat="server"><div class="button large" style="width:120px;font-size:13px;">Add Class</div></asp:HyperLink>
 </div>
 <div class="header">
     <table class="contentHeader" cellpadding="0" cellspacing="0">

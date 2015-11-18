@@ -1,22 +1,16 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Masters/ChicagoRun.Master" AutoEventWireup="true" CodeBehind="GuardianMile.aspx.cs" Inherits="ChicagoRun.WebUI.Pages.GuardianMile" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" runat="server">
-<div class="InformationalMsg" id="clientMessageDiv"  style="visibility: hidden">
-   <div id="clientMessage"> </div>
-</div>
+
 
 <div class="InformationalMsg" id="MessageDiv" runat="server" Visible="false" >
     <asp:Literal ID="Message" runat="server" />
 </div>
-
-<a href="guardianmilesearch.aspx"><div id="editExisting" class="button" style="font-size:16px">Edit Existing Mileage &#8594;</div></a>
-   
-<div class="page-title"><h2>New Entry</h2></div>
-
+ 
 <div style="float:right;"><asp:Image ID="Indicator" runat="server"/></div>
 <div style="float:left; width:400px;">
     <asp:HiddenField runat="server" ID="UserName"></asp:HiddenField>
     <asp:HiddenField runat="server" ID="UserId"></asp:HiddenField>
-    Choose the speed that best describes your physical activity:
+    <asp:Image ID="Icon1" runat="server"/>&nbsp;Choose the speed that best describes your physical activity:
     <div class="contentArea" style="height:350px;padding:0.5em;">
         <ul class="activityList">
             <li>Leisurely Walk -<span>A slower, more relaxed walking speed.  For example – going for a walk with a friend in a park and enjoying the scenery.</span></li> 
@@ -35,13 +29,13 @@
 </div>
 <div style="float:right;width:510px;margin-left:10px">
     <table cellspacing="0" cellpadding="2">
-        <tr><td colspan="3"><asp:Image ID="Icon1" runat="server"/>&nbsp;Select Activity Speed</td><td>&nbsp;</td></tr>
+        <tr><td colspan="3"><asp:Image ID="Icon2" runat="server"/>&nbsp;Select Activity Speed</td><td>&nbsp;</td></tr>
         <tr>
             <td style="width:70px">&nbsp;</td><td><asp:DropDownList ID="ActivityDD" runat="server" Width="200"/></td>
             <td style="width:70px"><asp:Label runat="server" ID="ActivityName"></asp:Label></td><td style="width:110px"><asp:TextBox ID="UnitTB" runat="server" Width="70" MaxLength="10">0</asp:TextBox></td>
         </tr>
         
-        <tr><td colspan="3"><asp:Image ID="Icon2" runat="server"/>&nbsp;Select Date(s)</td><td>&nbsp;</td></tr>
+        <tr><td colspan="3"><asp:Image ID="Icon3" runat="server"/>&nbsp;Select Date(s)</td><td>&nbsp;</td></tr>
         <tr><td valign="top">&nbsp;</td><td colspan="2" style="width:280px;"><span id="selectedDate"></span></td>
             <td valign="top"></td></tr>
         <tr><td colspan="4">
@@ -52,25 +46,21 @@
          <table cellspacing="0" cellpadding="2">
            <tr>
                 <td align="left">
-                  <asp:Image ID="Icon3" runat="server" />
+                  <asp:Image ID="Icon4" runat="server" />
                </td>
                <td align="left" valign="bottom">
-                  <div id="addActivity" class="buttonMile" style="width: 90px;">Add Activity</div>
-               </td>
-               <td align="left" valign="bottom">
-                   <div id="clearActivity" class="button" style="width: 110px;" >Clear Activity</div> 
-               </td>
-               <td align="left">
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Image ID="Icon4" runat="server" />
-               </td>
-               <td align="left">
-                  <div id="saveActivity" class="button large" style="width: 140px; float: right;">Save Activity</div>
+                  <div id="addActivity" class="button large" style="width: 140px;">Add Activity</div>
                </td>
            </tr>        
        </table>
 </div>
 <div style="clear:both"></div>
-<div id="ActivityEntries">
+<br />
+<br />
+<div id="ActivityEntries" style="display:none">
+    <div class="InformationalMsg" id="clientMessageDiv"  style="visibility: hidden">
+   <div id="clientMessage"> </div>
+</div>
     <div id="header">
         <table class="contentHeader" cellpadding="0" cellspacing="0">
             <tr>
@@ -84,6 +74,10 @@
         </table>
     </div>
     <div id="Entries" class="contentArea" style="height:250px;"></div>
+     <div style="clear:both"></div>
+    <div id="saveActivity" class="button large" style="width: 140px; float: right;margin:5px;">Save Activity</div>
+    <div id="clearActivity" class="bluebutton" style="width: 140px;float: right;margin:5px;" >Clear Activity</div> 
+    
 </div>
 <div style="clear:both"></div>
 <input type="hidden" id="allActivities" name="allActivities" />
@@ -135,8 +129,12 @@
             }
         }
 
-        $("#clientMessage").html("Please don't forget to save the activity.");
-        $("#clientMessageDiv").css({ visibility: "visible" });
+        $("#ActivityEntries").css({display:"block"});
+
+        $("html, body").animate({ scrollTop: $('#ActivityEntries').offset().top }, 1000);
+        setTimeout(function(){$("#clientMessage").html("Please don't forget to save the activity.");$("#clientMessageDiv").css({ visibility: "visible" });},500);
+
+        
         $("#MessageDiv").hide();
         return;
 
@@ -163,6 +161,12 @@
     function clearActivities() {
         if (confirm("Are you sure you want to clear all activities?")) {
             $("#Entries").html('');
+            
+             $("#clientMessage").html("");
+            $("#clientMessageDiv").css({ visibility: "hidden" });
+            $("#ActivityEntries").css({display:"none"});
+             
+            
         }
     }
     function saveActivities() {
